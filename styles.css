@@ -36,6 +36,7 @@ header {
 .navbar-toggler {
   z-index: 1100;
   /* Ensure the toggle button stays above the menu */
+  margin-right: 3rem;
 }
 
 .navbar-collapse.show {
@@ -47,7 +48,7 @@ header {
 
 header .nav-link {
   color: #b5adbd;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -59,7 +60,7 @@ header .nav-link:hover {
   color: #ffffff;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   header .nav-link {
     margin: 1 rem 0;
     /* Add spacing for collapsed links */
@@ -144,7 +145,32 @@ header .nav-link:hover {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 992px) {
+  #about img.headshot {
+    width: 200px;
+    /* Smaller image for medium screens */
+    margin: 5rem 0;
+  }
 
+  #about p {
+    margin: 1rem 0;
+    /* Add spacing between paragraphs */
+  }
+}
+
+@media (max-width: 767px) {
+  #about .row {
+    flex-direction: column;
+    /* Stack the columns on top of each other */
+  }
+
+  #about img.headshot {
+    margin: 0 auto 2rem auto;
+    width: 250px;
+    height: 250px;
+    /* Center the image */
+  }
+}
 
 #about a {
   color: #102B3F;
@@ -152,6 +178,7 @@ header .nav-link:hover {
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 5px;
+  margin: 4px 8px;
 
 }
 
@@ -276,6 +303,32 @@ header .nav-link:hover {
   color: white;
 }
 
+@media (max-width: 1400px) and (min-width: 992px) {
+  #resume .row {
+    column-gap: 4rem;
+    /* Adjust the gap between columns */
+    row-gap: 3rem;
+    /* Add vertical spacing for smaller screens */
+  }
+}
+
+@media (max-width: 991px) {
+  #resume .row {
+    column-gap: 2rem;
+    /* Adjust the gap between columns */
+    row-gap: 3rem;
+    /* Add vertical spacing for smaller screens */
+  }
+}
+
+@media (min-width: 1401px) {
+  #resume .row {
+    column-gap: 6rem;
+    /* Adjust the gap between columns */
+    row-gap: 3rem;
+    /* Add vertical spacing for smaller screens */
+  }
+}
 
 /* Projects Section */
 
@@ -340,6 +393,14 @@ header .nav-link:hover {
 
 .project-card:hover .project-back {
   opacity: 1;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  #projects .row .col-md-6:nth-child(3) {
+    margin-left: auto;
+    /* Push the card to the center */
+    margin-right: auto;
+  }
 }
 
 
