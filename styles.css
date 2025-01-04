@@ -346,7 +346,7 @@ header .nav-link:hover {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  height: 400px;
+  height: 450px;
   cursor: pointer;
   position: relative;
   transition: transform 0.3s ease;
@@ -386,7 +386,7 @@ header .nav-link:hover {
   top: 0;
   left: 0;
   z-index: 1;
-  padding: 20px;
+  padding: 15px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -395,12 +395,33 @@ header .nav-link:hover {
   opacity: 1;
 }
 
+@media (max-width: 1199px) and (min-width: 992px) {
+  #projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Enable wrapping for the cards */
+  }
+
+  #projects .col-lg-4 {
+    flex: 0 0 50%;
+    /* Make each card take 50% of the width */
+    max-width: 50%;
+  }
+
+  #projects .col-lg-4:nth-child(3) {
+    margin-left: auto;
+    /* Push the card to the center */
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 991px) and (min-width: 768px) {
   #projects .row .col-md-6:nth-child(3) {
     margin-left: auto;
     /* Push the card to the center */
     margin-right: auto;
   }
+
 }
 
 
