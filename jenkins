@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+
+        stage("Provision")
+        {
+            steps{
+                sh'rm -r * '
+                sh'rm -r /var/www/html*'
+            }
+        }
+        stage("Build")
+        {
+            steps{
+                sh'chmod 777 /var/lib/jenkins/workspace/shashank/'
+            }
+        }
+        stage("3rd")
+        {
+            steps{
+                sh'cd /var/lib/jenkins/workspace/shashank/'
+            }
+        }
+        }
+    }

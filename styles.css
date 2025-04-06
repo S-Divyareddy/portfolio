@@ -167,7 +167,7 @@ header .nav-link:hover {
   #about img.headshot {
     margin: 0 auto 2rem auto;
     width: 250px;
-    height: 250px;
+    height: 300px;
     /* Center the image */
   }
 }
