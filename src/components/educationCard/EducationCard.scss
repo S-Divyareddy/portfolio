@@ -1,0 +1,96 @@
+@import "../../_globalColor";
+
+.education-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  text-align: left;
+}
+
+.education-card-left {
+  flex-shrink: 0;
+}
+
+.education-card-right {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+.education-text-school {
+  margin: 0;
+  font-size: clamp(21px, 2.5vw, 28px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
+}
+
+.education-text-details {
+  display: grid;
+  gap: 10px;
+}
+
+.education-text-subHeader {
+  color: $textColor;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.education-text-duration {
+  color: $cardSubtitle;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.education-text-desc {
+  color: $cardSubtitle;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.dark-mode .education-text-duration,
+.dark-mode .education-text-desc {
+  color: $subTitle;
+}
+
+.education-text-bullets > ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.education-roundedimg {
+  display: block;
+  object-fit: cover;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+}
+
+.education-card-border {
+  width: 100%;
+  border: 0;
+  margin: 8px 0 28px;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .education-text-subHeader {
+    font-size: 16px;
+  }
+  .education-card-right {
+    width: 100%;
+  }
+}
